@@ -50,6 +50,14 @@ AS (
 
 DROP MATERIALIZED VIEW VISTAVENTAS
 
+
+-- inciso d. ii
+SELECT genero, COUNT(*) as Conteo
+FROM vistaVentas
+WHERE vistaVentas.anio = 2013;
+GROUP BY genero, COUNT(*)
+ORDER BY COUNT(*)
+
 Select * from vistaVentas
 
 
@@ -62,5 +70,4 @@ GROUP BY semana
 ORDER BY semana
 
 -- 			inciso d.v
-
 
