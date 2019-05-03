@@ -59,6 +59,7 @@ ORDER BY COUNT(*)
 
 Select * from vistaVentas
 
+
 --inciso d.i
 select count(vistaVentas.mediatype), vistaVentas.mediatype
 from vistaVentas
@@ -66,6 +67,12 @@ group by vistaVentas.mediatype
 order by count(vistaVentas.mediatype) desc
 limit 1;
 
+--inciso d.ii
+SELECT vistaventas.genero, COUNT(*) as Conteo
+FROM vistaVentas
+WHERE vistaVentas.anio = 2013
+GROUP BY vistaventas.genero
+ORDER BY COUNT(*) DESC
 
 -- 				inciso d. iii
 
