@@ -48,9 +48,15 @@ AS (
 	JOIN track ON il.trackid = track.trackid
 )
 
-DROP MATERIALIZED VIEW VISTAVENTAS
 
 Select * from vistaVentas
+
+--inciso d.i
+select count(vistaVentas.mediatype), vistaVentas.mediatype
+from vistaVentas
+group by vistaVentas.mediatype
+order by count(vistaVentas.mediatype) desc
+limit 1;
 
 
 -- 				inciso d. iii
